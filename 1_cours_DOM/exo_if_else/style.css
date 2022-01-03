@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+body {
+    
+    min-height: 2000px;
+    
+}
+.photo {
+    background: url(../Mass\ effect.jpg) center/cover;
+    height: 100vh;
+    position: relative;
+}
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    background: rgba(64, 224, 208, 0.274);
+    top: -100px;
+
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+}
+li {
+    padding-left: 50px;
+    font-size: 1.5rem;
+    margin-right: 50px;
+}

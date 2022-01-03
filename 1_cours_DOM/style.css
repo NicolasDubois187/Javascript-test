@@ -1,6 +1,7 @@
 body {
     text-align: center;
-    
+    transition: 0.3s;
+    min-height: 200vh;
 }
 h1 {
     user-select: none;
@@ -62,4 +63,34 @@ h1 {
     
     
 }
+.theme-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.theme {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 30px;
 
+}
+#dark {
+    background: black;
+}
+#red {
+    background: red;
+}
+#orchid {
+    background: orchid;
+}
+.dark-theme {
+    background: black;
+    color: white;
+}
+.red-theme {
+    background: red;
+}
+.orchid-theme {
+    background: orchid;
+}
