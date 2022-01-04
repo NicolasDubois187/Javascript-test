@@ -14,7 +14,7 @@ h1 {
 }
 #img {
     position: absolute;
-    top: 250px;
+    top: 350px;
     transform: translate(-50%, -50%);
 }
 .popUp {
@@ -93,4 +93,12 @@ h1 {
 }
 .orchid-theme {
     background: orchid;
+}
+
+#carre {
+    height: 80px;
+    width: 80px;
+    background: rgba(137, 43, 226, 0.24);
+    border-radius: 5px;
+    position: absolute;
 }

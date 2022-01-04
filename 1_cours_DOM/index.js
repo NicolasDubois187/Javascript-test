@@ -82,3 +82,121 @@ window.addEventListener("scroll", () => {
     }
     console.log(window.scrollY);
 })
+
+// KEYDOWN EVENT**********************
+
+function ring() {
+    const audio = new Audio();
+    audio.src = "../sounds/e.mp3";
+    audio.play();
+}
+function ahh() {
+    const audio = new Audio();
+    audio.src = "../sounds/a.mp3";
+    audio.play();
+}
+function drum() {
+    const audio = new Audio();
+    audio.src = "../sounds/z.mp3";
+    audio.play();
+}
+window.addEventListener("keydown", (e) => {
+    console.log(e.key);
+
+    if (e.key === "a") {
+        ahh();
+    } else if (e.key === "e") {
+        ring();
+    } else if (e.key === "z") {
+        drum();
+    }
+});
+let haut = 0;
+let gauche = 0;
+
+// window.addEventListener("keydown", (e) => {
+//     console.log(e.key);
+
+//     if (e.key === "ArrowUp") {
+//         haut = haut + 20;
+//         carre.style.top = haut + "px";
+//     } else if (e.key === "ArrowLeft") {
+//         gauche = gauche + 20;
+//         carre.style.left = gauche + "px";
+//     } 
+// })
+
+window.addEventListener("keydown", (e) => {
+        console.log(e.key);
+
+        switch (e.key) {
+            case "ArrowDown":
+                haut = haut + 20;
+                carre.style.top = haut + "px";
+                break;
+            case "ArrowUp":
+                haut = haut - 20;
+                carre.style.top = haut + "px";
+                break;
+            case "ArrowLeft":
+                gauche = gauche - 20;
+                carre.style.left = gauche + "px";
+                break;    
+             case "ArrowRight":
+                gauche = gauche + 20;
+                carre.style.left = gauche + "px";
+                break; 
+                default:
+                null;
+
+
+        }
+});
+
+// INPUT EVENTS**********************************
+
+const inputName = document.querySelector(".input-name");
+
+inputName.addEventListener("input", () => {
+    console.log(inputName.value);
+});
+
+function addition(a, b) {
+    resultat.textContent = (parseInt(a) + parseInt(b));
+  }
+function soustraction(a, b) {
+    resultat.textContent = (a - b);
+  }
+function multiplication(a, b) {
+    resultat.textContent = (a * b);
+  }
+function division(a, b) {
+    resultat.textContent = (a / b);
+  }
+  
+chiffre1.addEventListener("input", () => {
+    console.log(typeof parseInt(chiffre1.value));
+})  
+chiffre2.addEventListener("input", () => {
+    console.log(typeof parseInt(chiffre2.value));
+})  
+resultat.addEventListener("input", () => {
+    console.log(typeof parseInt(resultat.value));
+})  
+
+add.addEventListener("click", () => {
+addition((chiffre1.value), (chiffre2.value));
+ })
+sou.addEventListener("click", () => {
+soustraction((chiffre1.value), (chiffre2.value));
+})
+mul.addEventListener("click", () => {
+multiplication((chiffre1.value), (chiffre2.value));
+})
+div.addEventListener("click", () => {
+division((chiffre1.value), (chiffre2.value));
+})
+
+
+  
+
