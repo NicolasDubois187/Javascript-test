@@ -197,6 +197,14 @@ div.addEventListener("click", () => {
 division((chiffre1.value), (chiffre2.value));
 })
 
+// SUBMIT EVENT***********************
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (e) => {
+e.preventDefault();
+
+})
 
   
 

@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+}
+.card {
+    border: 2px solid salmon;
+    width: 200px;
+
+}

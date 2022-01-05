@@ -1,7 +1,7 @@
 body {
     text-align: center;
     transition: 0.3s;
-    min-height: 200vh;
+    min-height: 100vh;
 }
 h1 {
     user-select: none;
@@ -13,6 +13,7 @@ h1 {
     border: 2px solid pink;
 }
 #img {
+    display: none;
     position: absolute;
     top: 350px;
     transform: translate(-50%, -50%);
@@ -101,4 +102,5 @@ h1 {
     background: rgba(137, 43, 226, 0.24);
     border-radius: 5px;
     position: absolute;
+    transform: translate(-50%, -50%);
 }
