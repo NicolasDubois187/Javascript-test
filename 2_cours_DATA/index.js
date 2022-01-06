@@ -63,10 +63,15 @@ let arrayOfObject = [
 //     // console.log("je suis le tour n° : " + i);
 //     console.log(complexArray[i]);
 // }
+let memberList = [];
 
 for (i = 0; i < arrayOfObject.length; i++) {
-    console.log(arrayOfObject[i]);
+    // console.log(arrayOfObject[i]);
     // document.body.innerHTML += "<li>Prénom : " + arrayOfObject[i].nom + "</li>";
+    if (arrayOfObject[i].admin === false) {
+        memberList.push(arrayOfObject[i].nom);
+        // console.log(memberList);
+    }
 }
 
 // MAP***********************************
@@ -85,4 +90,44 @@ document.body.innerHTML = arrayOfObject.map((user) =>
 // Fonction ternaire***********************
 
 // c'est un if/else sur une seule ligne
-nombre < 50 ? "valeur si vrai" : "valeur si faux";
+
+// nombre < 50 ? "valeur si vrai" : "valeur si faux";
+
+let numberArray = [23,34,21,4,2432,34];
+let numberArray2 = [1, 49, 574];
+
+//  Spread operator : permet de casser le tableau en question
+
+let newArray = [...numberArray, ...numberArray2];
+
+// PUSH : permet d'ajouter un élément au tableau
+newArray.push(3);
+console.log(newArray);
+
+// Méthode Sort (trier les éléments)
+
+newArray.sort((a, b) => {
+    return a - b; 
+
+});
+let newFilter = newArray.filter((number) => number > 45).sort((a, b) => {
+    return b - a;
+});
+
+console.log(newFilter);
+
+//  LOCAL STORAGE***************************
+
+//  stocker les éléments dans le local storage
+function storage () {
+    window.localStorage.mesSupersNombres = newArray;
+}
+storage();
+
+// Récupérer les données stockées
+function getStorage() {
+    let storageContent = window.localStorage.mesSupersNombres;
+    console.log(storageContent.split(","));
+    document.body.textContent = storageContent;
+}
+getStorage();
